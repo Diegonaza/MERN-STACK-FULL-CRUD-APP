@@ -1,36 +1,36 @@
 import { useEffect} from "react";
-import { useCostumerContext } from "../hooks/useCostumersContext";
+import { useCustomerContext } from "../hooks/useCustomersContext";
 
 //components
-import CostumerDetails from '../Components/CostumerDetails'
-import CostumerForm from "../Components/CostumerForm";
+import CustomerDetails from '../Components/CustomerDetails'
+import CustomerForm from "../Components/CustomerForm";
 
 const Home = () =>{
-  const {costumers,dispatch} = useCostumerContext()
+  const {customers,dispatch} = useCustomerContext()
 
   useEffect(()=>{
 
-    const fetchCostumers = async () =>{
-      const response = await fetch('http://localhost:3000/api/costumers/')
+    const fetchcustomers = async () =>{
+      const response = await fetch('http://localhost:3000/api/customers/')
       const json = await response.json()
 
       if(response.ok){
-        dispatch({type: 'Set_Costumers', payload: json})
+        dispatch({type: 'Set_customers', payload: json})
       }
     }
 
-    fetchCostumers()
+    fetchcustomers()
   },[])
 
   return (
     
     <div className="home">
-      <div className="costumers">
-        {costumers && costumers.map((costumer)=>(
-          <CostumerDetails key={costumer._id} costumer = {costumer}/>
+      <div className="customers">
+        {customers && customers.map((customer)=>(
+          <CustomerDetails key={customer._id} customer = {customer}/>
         ))}
       </div>
-      <CostumerForm />
+      <CustomerForm />
     </div>
   )
 }

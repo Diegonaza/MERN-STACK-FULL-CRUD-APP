@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './views/Home'
 import Search from './views/Search';
 import Navbar from './Components/Navbar';
-import EditCostumer from './views/EditCostumer';
+import EditCustomer from './views/EditCustomer';
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
             element={<Search />} 
             />
             <Route 
-            path="/EditCostumer"
-            element={<EditCostumer />}
+            path="/editcustomer"
+            element={<EditCustomer />}
             />
            
           </Routes>

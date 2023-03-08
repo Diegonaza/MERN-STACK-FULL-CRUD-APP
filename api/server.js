@@ -2,7 +2,7 @@ const dotenv = require('dotenv')
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
-const costumerRoutes = require('./routes/costumers')
+const customerRoutes = require('./routes/customers')
 
 
 
@@ -17,7 +17,11 @@ mongoose.connect(process.env.DB_URI,{
   useUnifiedTopology : true
 }).then(()=> console.log("Connected to DB")).catch(console.error);
 
-app.use('/api/costumers',costumerRoutes)
+const path = require('path')
+app.use('/static', express.static(path.join(__dirname, '/public/images')))
+app.use('/api/customers',customerRoutes)
+
+
 
 
 app.listen(process.env.PORT,()=> console.log('Server started at port :', process.env.PORT))

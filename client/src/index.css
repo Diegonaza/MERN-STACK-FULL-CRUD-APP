@@ -38,7 +38,7 @@ header a {
   grid-template-columns: 3fr 1fr;
   gap: 100px;
 }
-.costumer-details {
+.customer-details {
   background: #fff;
   border-radius: 4px;
   margin: 20px auto;
@@ -46,17 +46,17 @@ header a {
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
 }
-.costumer-details h2 {
+.customer-details h2 {
   margin: 0 0 10px 0;
   font-size: 1.2em;
   color: var(--primary);
 }
-.costumer-details h4 {
+.customer-details h4 {
   margin: 0;
   font-size: 0.9em;
   color: #555;
 }
-.costumer-details span {
+.customer-details span {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -67,7 +67,7 @@ header a {
   color: #333;
 }
 
-/* new Costumer form */
+/* new customer form */
 label, input {
   display: block;
 }
@@ -101,3 +101,109 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
+
+/*customer details Tattoos */
+
+.tattoo{
+  position: relative;
+  text-align: center;
+  -webkit-text-fill-color: rgb(4, 53, 53);
+  display: inline-block;
+  padding-right: 50px;
+}
+
+.tattoos-main{
+  text-align: center;
+  background-color: rgba(143, 142, 142, 0.05);
+}
+
+.tattoo span {
+  scale: 60%;
+  position: absolute;  
+  top: 60px;
+  right: 45px;
+  cursor: pointer;
+  background: #eb7777d5;
+  
+  border-radius: 50%;
+  color: #333;
+}
+
+.tattooimg{
+  border-radius: 5%;
+}
+
+.tattoo1 {
+  position: relative;
+}
+
+.tattooicon span {
+  position:absolute;  
+  top: 0;
+  right:0;
+  cursor: pointer;
+  background: var(--primary);
+  padding: 6px;
+  border-radius: 50%;
+  color: #181717;
+}
+
+
+/* POP UP  */
+
+.popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: #f1f1f1;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  width: 30%;
+  height: 60%;
+  max-width: 80%; /* set maximum width to 80% of the viewport */
+  max-height: 80%; /* set maximum height to 80% of the viewport */
+  overflow: auto; /* enable scrolling if content is too large */
+}
+.popupButtom{
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-cancel{
+  background: var(--error);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.img-prev{
+  max-width: 60%;
+  max-height: 70%;
+  border-radius: 3%;
+}
+
